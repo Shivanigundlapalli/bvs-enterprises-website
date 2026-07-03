@@ -69,7 +69,7 @@ export default function Footer({ setActiveTab, settings }: FooterProps) {
       <div className="layout-container">
         
         {/* 4-Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[56px] text-center sm:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14 text-center sm:text-left">
           
           {/* Column 1: Logo, Brand name, Trust indicators, Social Icons */}
           <div className="flex flex-col items-center sm:items-start space-y-[20px] h-full">
@@ -277,7 +277,7 @@ export default function Footer({ setActiveTab, settings }: FooterProps) {
         <div className="w-full border-t border-white/10 mt-[32px] mb-[32px]" />
 
         {/* 5 Feature Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4">
           
           {/* Card 1: PREMIUM QUALITY */}
           <div className="group h-[88px] rounded-[16px] bg-white/[0.04] border border-white/[0.08] p-[18px] flex items-center gap-[16px] hover:-translate-y-[3px] hover:bg-white/[0.08] hover:shadow-lg hover:border-[#F3C29F]/30 hover:ring-1 hover:ring-[#F3C29F]/30 hover:scale-[1.02] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-pointer">

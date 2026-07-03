@@ -61,7 +61,7 @@ export default function HomeView({
       <div className="relative bg-[#FAF8F5] text-[#222222] py-[48px] lg:py-[72px] overflow-hidden border-b border-[#ECE5DD] text-left">
         <div className="absolute inset-0 bg-radial-gradient from-white/20 to-transparent pointer-events-none" />
         
-        <div className="layout-container grid grid-cols-1 lg:grid-cols-[52%_48%] items-center gap-[40px] lg:gap-[64px] relative z-10">
+        <div className="layout-container flex flex-col-reverse lg:grid lg:grid-cols-[52%_48%] items-center gap-[40px] lg:gap-[64px] relative z-10">
           
           {/* Left Side: Editorial Typography Panel (52% width) */}
           <div className="w-full max-w-[600px] mx-auto lg:mx-0 flex flex-col justify-center text-center lg:text-left space-y-[24px] md:space-y-[32px] relative mt-4 lg:mt-0">

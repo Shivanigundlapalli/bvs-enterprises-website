@@ -43,7 +43,7 @@ export default function AboutView({
       
       {/* 1. HERO SECTION: "Crafting Spaces. Building Trust Since 2008" */}
       <div className="layout-container py-[48px] lg:py-[72px] text-left">
-        <div className="grid grid-cols-1 lg:grid-cols-[52%_48%] items-center gap-[32px] lg:gap-[64px]">
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-[52%_48%] items-center gap-[32px] lg:gap-[64px]">
           
           {/* Left Text Content (52% width) */}
           <motion.div 
