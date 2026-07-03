@@ -93,28 +93,28 @@ const CAROUSEL_SLIDES = [
     tagline: 'Premium Wooden Sofa',
     headline: 'Royal Sofa Sets & Loungers',
     description: 'Plush cushions, detailed floral carving designs, and heavy-gauge rosewood frames crafted to bring ancestry prestige into your living room.',
-    image: '/carousel-1.jpg',
+    image: '/carousel-2.jpg',
     categoryTarget: 'cat-sofas'
   },
   {
     tagline: 'Modern Dining Set',
     headline: 'Exquisite Solid Dining Tables',
     description: 'Elegant 6-seater and 8-seater dining suites, incorporating thick tempered glass elements with heirloom Burma teak frameworks.',
-    image: '/carousel-1.jpg',
+    image: '/images/dining-tables.jpg',
     categoryTarget: 'cat-dining-tables'
   },
   {
     tagline: 'Office Furniture Collection',
     headline: 'Stately Executive Cabin Comfort',
     description: 'Equip your corporate space with posture-correct mesh swivel chairs, heavy solid-panel desk surfaces, and robust steel storage safes.',
-    image: '/carousel-1.jpg',
+    image: '/carousel-4.jpg',
     categoryTarget: 'cat-office-furniture'
   },
   {
     tagline: 'Custom Furniture Showcase',
     headline: 'Bespoke Carpentry Tailoring',
     description: 'We bring raw measuring tapes directly to your walls, co-designing layout specs or timber veneers without dealers or middleman fees.',
-    image: '/carousel-1.jpg',
+    image: '/carousel-5.jpg',
     categoryTarget: 'custom'
   }
 ];

@@ -30,10 +30,11 @@ export default function ProductCard({ product, onViewDetails, categoryName }: Pr
       {/* Product Image Stage */}
       <div className="relative aspect-square overflow-hidden bg-stone-50 shrink-0">
         <img
-          src={product.images[0] || '/carousel-1.jpg'}
+          src={product.images[0] || 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&auto=format&fit=crop&q=80'}
           alt={product.name}
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-103"
+          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
 
         {/* Badges */}
@@ -108,7 +109,7 @@ export default function ProductCard({ product, onViewDetails, categoryName }: Pr
         <div className="mt-auto pt-[16px] border-t border-black/[0.06] flex flex-col sm:flex-row gap-2">
           <button
             onClick={() => onViewDetails(product)}
-            className="flex-1 bg-[#FAF8F5] border border-black/[0.08] hover:bg-[#8B4F24] hover:text-white text-[#222222] text-[10.5px] font-sans font-bold uppercase tracking-wider py-[10px] px-3 rounded-full transition-all duration-300 cursor-pointer flex items-center justify-center gap-1.5 active:scale-97"
+            className="btn-base btn-secondary gap-1.5 flex-1 h-[40px] text-[11px] w-full"
           >
             <Eye className="h-3.5 w-3.5" />
             <span>View Details</span>
@@ -116,7 +117,7 @@ export default function ProductCard({ product, onViewDetails, categoryName }: Pr
           
           <button
             onClick={handleWhatsAppEnquiry}
-            className="flex-1 bg-[#075E54] hover:bg-[#128C7E] text-white text-[10.5px] font-sans font-bold uppercase tracking-wider py-[10px] px-3 rounded-full transition-all duration-300 cursor-pointer flex items-center justify-center gap-1.5 active:scale-97 border-none"
+            className="btn-base gap-1.5 flex-1 h-[40px] text-[11px] w-full bg-[#075E54] text-white hover:bg-[#128C7E]"
           >
             <MessageCircle className="h-3.5 w-3.5" />
             <span>Enquire</span>

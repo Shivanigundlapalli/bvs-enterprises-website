@@ -19,7 +19,7 @@ export default function ProductDetailsModal({
   onViewProduct,
   onSubmitInquiry
 }: ProductDetailsModalProps) {
-  const [activeImage, setActiveImage] = useState(product.images[0] || '/carousel-1.jpg');
+  const [activeImage, setActiveImage] = useState(product.images[0] || 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&auto=format&fit=crop&q=80');
   const [selectedVariants, setSelectedVariants] = useState<{ [key: string]: ProductVariant }>({});
   const [customerName, setCustomerName] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
@@ -335,7 +335,7 @@ export default function ProductDetailsModal({
 
                       <button
                         type="submit"
-                        className="w-full bg-[#8B4F24] hover:bg-[#5C3315] text-white font-sans text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-[2px] cursor-pointer border-none"
+                        className="btn-base btn-primary w-full"
                       >
                         Submit Official Inquiry
                       </button>
@@ -350,7 +350,7 @@ export default function ProductDetailsModal({
                   </span>
                   <button
                     onClick={handleWhatsAppRedirect}
-                    className="w-full bg-[#FAF8F5] border border-black/[0.08] hover:bg-[#8B4F24] hover:text-white text-[#222222] font-sans text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-[2px] flex items-center justify-center gap-2 cursor-pointer"
+                    className="btn-base btn-secondary w-full gap-2"
                   >
                     <MessageSquare className="h-4 w-4" />
                     <span>Instant Showroom WhatsApp Dispatch</span>

@@ -94,7 +94,7 @@ export default function CustomizerForm({ onSubmitRequest }: CustomizerFormProps)
       custom_design: customDesign,
       finish_requirements: finishRequirements,
       special_requirements: specialRequirements,
-      reference_image_url: referenceImageUrl || '/images/custom-furniture.jpg',
+      reference_image_url: referenceImageUrl || 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&auto=format&fit=crop&q=80',
       message: message
     });
 
@@ -236,7 +236,7 @@ export default function CustomizerForm({ onSubmitRequest }: CustomizerFormProps)
             <div className="pt-2">
               <button
                 onClick={handleWhatsAppCustom}
-                className="bg-[#8B4F24] hover:bg-[#5C3315] text-[#FAF8F5] font-sans font-bold text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-[2px] inline-flex items-center justify-center gap-2 cursor-pointer border-none"
+                className="btn-base btn-primary gap-2"
               >
                 <MessageSquare className="h-4 w-4" /> Open WhatsApp Thread
               </button>
@@ -424,7 +424,7 @@ export default function CustomizerForm({ onSubmitRequest }: CustomizerFormProps)
             <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-[16px]">
               <button
                 type="submit"
-                className="bg-[#8B4F24] hover:bg-[#5C3315] text-white font-sans text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-[2px] text-center border-none cursor-pointer"
+                className="btn-base btn-primary"
               >
                 Submit Customization Plan
               </button>
@@ -432,7 +432,7 @@ export default function CustomizerForm({ onSubmitRequest }: CustomizerFormProps)
               <button
                 type="button"
                 onClick={handleWhatsAppCustom}
-                className="bg-[#FAF8F5] border border-black/[0.08] hover:bg-[#8B4F24] hover:text-white text-[#222222] font-sans text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-sm hover:shadow-md hover:-translate-y-[2px] flex items-center justify-center gap-2 cursor-pointer"
+                className="btn-base btn-secondary gap-2"
               >
                 <MessageSquare className="h-4 w-4 text-emerald-600 group-hover:text-white" />
                 <span>Submit via WhatsApp</span>

@@ -73,13 +73,16 @@ function Navbar({
             : 'bg-white/95 backdrop-blur-md border-[#ECE5DD]/60'
         }`}
       >
-        <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 flex items-center justify-between w-full h-full">
+        <div className="layout-container flex items-center justify-between w-full h-full">
           
           {/* Left Section: Logo Signature */}
             <div
               id="navbar-logo"
               onClick={() => setActiveTab('home')}
               className="flex items-center gap-3 cursor-pointer group select-none text-left"
+              role="button"
+              tabIndex={0}
+              aria-label="Go to Home"
             >
               <BvsLogo 
                 variant="icon" 
@@ -104,8 +107,9 @@ function Navbar({
                   <button
                     key={item.label}
                     onClick={() => setActiveTab(item.tabKey)}
-                    className={`relative h-full px-1 text-xs lg:text-[12.5px] font-sans font-semibold tracking-widest uppercase transition-all duration-300 hover:text-[#8B4F24] cursor-pointer whitespace-nowrap flex items-center group ${
-                      isActive ? 'text-[#8B4F24]' : 'text-[#6F6F6F]'
+                    aria-label={`Go to ${item.label}`}
+                    className={`relative h-full px-1 text-[13px] font-sans font-semibold tracking-widest uppercase transition-all duration-250 ease-out cursor-pointer whitespace-nowrap flex items-center group ${
+                      isActive ? 'text-[#8B4F24]' : 'text-[#666666] hover:text-[#8B4F24]'
                     }`}
                   >
                     <span>{item.label}</span>
@@ -116,7 +120,7 @@ function Navbar({
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     ) : (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#8B4F24] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center" />
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#8B4F24] scale-x-0 group-hover:scale-x-100 transition-transform duration-250 origin-center ease-out" />
                     )}
                   </button>
                 );
@@ -127,9 +131,10 @@ function Navbar({
             <div className="hidden lg:flex items-center gap-3 shrink-0">
               <button
                 onClick={handleWhatsAppClick}
-                className="bg-[#8B4F24] hover:bg-[#5C3315] text-[#FAF8F5] px-5 py-2.5 rounded-full font-sans font-semibold tracking-wider text-[11px] uppercase transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm"
+                className="btn-base btn-primary gap-1.5"
+                aria-label="WhatsApp Inquiry"
               >
-                <MessageCircle className="h-3.5 w-3.5" />
+                <MessageCircle className="h-4 w-4" />
                 <span>WhatsApp</span>
               </button>
             </div>
