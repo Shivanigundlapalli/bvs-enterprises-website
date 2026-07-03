@@ -1,0 +1,6 @@
+{
+  "name": "BVS Enterprises Furniture Store",
+  "description": "Premium BVS Enterprises luxury furniture showroom landing page. Browse home, office, and custom manufacturing collections, send direct WhatsApp or phone enquiries, and explore our heritage collections in Tirupati.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
