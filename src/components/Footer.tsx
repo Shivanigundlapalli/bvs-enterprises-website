@@ -66,7 +66,7 @@ export default function Footer({ setActiveTab, settings }: FooterProps) {
   return (
     <footer className="bg-[#5C3315] text-[#E3D9CE] border-t border-white/[0.08] py-6 md:pt-[56px] md:pb-[28px] font-sans relative overflow-hidden">
       {/* 1280px Centered Container */}
-      <div className="layout-container">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 lg:px-20">
         
         {/* 4-Column Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[56px] text-center sm:text-left">

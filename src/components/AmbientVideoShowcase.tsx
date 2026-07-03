@@ -95,7 +95,7 @@ export default function AmbientVideoShowcase() {
 
   return (
     <section className="bg-[#FAF8F5] py-20 border-y border-[#D8B58A]/20">
-      <div className="layout-container">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center space-y-3 max-w-3xl mx-auto mb-14">

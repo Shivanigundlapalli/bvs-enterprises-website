@@ -19,7 +19,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Wind,
-  Armchair,
+  Smile,
   Calendar,
   Factory
 } from 'lucide-react';
@@ -61,24 +61,24 @@ export default function HomeView({
       <div className="relative bg-[#FAF8F5] text-[#222222] py-[48px] lg:py-[72px] overflow-hidden border-b border-[#ECE5DD] text-left">
         <div className="absolute inset-0 bg-radial-gradient from-white/20 to-transparent pointer-events-none" />
         
-        <div className="layout-container grid grid-cols-1 lg:grid-cols-[52%_48%] items-center gap-[40px] lg:gap-[64px] relative z-10">
+        <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 grid grid-cols-1 lg:grid-cols-[52%_48%] items-center gap-[32px] lg:gap-[64px] relative z-10">
           
           {/* Left Side: Editorial Typography Panel (52% width) */}
-          <div className="w-full max-w-[600px] mx-auto lg:mx-0 flex flex-col justify-center text-center lg:text-left space-y-[24px] md:space-y-[32px] relative mt-4 lg:mt-0">
+          <div className="w-full max-w-[560px] flex flex-col justify-center space-y-[24px] md:space-y-[32px] relative">
             <div className="space-y-[16px] md:space-y-[20px]">
               <span className="text-xs font-sans font-bold uppercase tracking-[0.2em] text-[#8B4F24] inline-block">
                 Est. 2008 • Premium Furniture Showroom
               </span>
-              <h1 className="text-h1 font-serif font-semibold text-[#222222] tracking-tight mx-auto lg:mx-0">
+              <h1 className="font-serif font-semibold text-[#222222] leading-[1.1] tracking-tight text-[32px] md:text-[44px] lg:text-[52px]">
                 Furniture Crafted <br className="hidden sm:inline" /> For Modern Living
               </h1>
-              <p className="text-body text-[#666666] font-sans font-normal max-w-[560px] mx-auto lg:mx-0">
+              <p className="text-[#6F6F6F] text-[16px] font-sans font-normal leading-[1.7] max-w-[560px]">
                 Discover elegant furniture designed for comfort, durability, and timeless style. From wooden beds and wardrobes to office furniture, chairs, mattresses, and custom-made interiors, BVS Enterprises brings premium quality direct from our factory to your home.
               </p>
             </div>
 
             {/* Primary & Secondary CTAs */}
-            <div className="flex flex-wrap gap-[16px] justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-[16px]">
               <button
                 onClick={() => {
                   setCatalogPage(1);
@@ -87,8 +87,7 @@ export default function HomeView({
                   setActiveTab('products');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="btn-base btn-primary gap-2"
-                aria-label="Explore Collection"
+                className="bg-[#8B4F24] hover:bg-[#5C3315] text-[#FAF8F5] font-sans font-bold text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-[0_4px_12px_rgba(139,79,36,0.12)] hover:shadow-[0_8px_20px_rgba(139,79,36,0.2)] hover:-translate-y-[2px] cursor-pointer whitespace-nowrap border-none inline-flex items-center justify-center"
               >
                 Explore Collection
               </button>
@@ -100,15 +99,14 @@ export default function HomeView({
                     el.scrollIntoView({ behavior: 'smooth' });
                   }
                 }}
-                className="btn-base btn-secondary gap-2"
-                aria-label="Visit Showroom"
+                className="bg-transparent hover:bg-[#8B4F24]/5 text-[#8B4F24] border-2 border-[#8B4F24] font-sans font-bold text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 hover:-translate-y-[2px] cursor-pointer inline-flex items-center justify-center"
               >
                 Visit Showroom
               </button>
             </div>
 
             {/* Horizontal Trust Badges under buttons */}
-            <div className="grid grid-cols-2 gap-[12px] sm:gap-[16px] pt-[24px] border-t border-[#ECE5DD]/80 w-full max-w-[560px] mx-auto lg:mx-0 text-left">
+            <div className="grid grid-cols-2 gap-[16px] pt-[24px] border-t border-[#ECE5DD]/80 w-full max-w-[560px]">
               <div 
                 onClick={() => {
                   setActiveTab('about');
@@ -161,10 +159,10 @@ export default function HomeView({
           </div>
 
           {/* Right Side: Showcase image sliding panel (48% width) */}
-          <div className="w-full relative shrink-0">
-            <div className="absolute inset-0 bg-[#8B4F24]/5 rounded-[24px] transform translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 pointer-events-none"></div>
+          <div className="w-full flex flex-col justify-center items-center relative shrink-0">
+            <div className="absolute inset-0 bg-[#8B4F24]/5 rounded-[24px] transform translate-x-4 translate-y-4 w-full h-[280px] sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[560px] aspect-[16/10] sm:aspect-[4/3] lg:aspect-auto ml-auto pointer-events-none"></div>
             
-            <div className="relative rounded-[24px] overflow-hidden border border-[#ECE5DD] shadow-[0_10px_30px_rgba(0,0,0,0.05)] w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-video lg:aspect-auto lg:h-[500px] xl:h-[560px] bg-stone-100 group">
+            <div className="relative rounded-[24px] overflow-hidden border border-[#ECE5DD] shadow-[0_10px_30px_rgba(0,0,0,0.05)] w-full h-[280px] sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[560px] aspect-[16/10] sm:aspect-[4/3] lg:aspect-auto bg-stone-100 group">
               {carouselSlides.map((slide, idx) => (
                 <div
                   key={idx}
@@ -176,7 +174,7 @@ export default function HomeView({
                     src={slide.image}
                     alt={slide.headline}
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover object-center select-none transition-transform duration-[6000ms] ease-out scale-100 group-hover:scale-103"
+                    className="w-full h-full object-cover select-none transition-transform duration-[6000ms] ease-out scale-100 group-hover:scale-103"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#222222]/50 via-transparent to-transparent"></div>
                   
@@ -215,14 +213,14 @@ export default function HomeView({
       </div>
 
       {/* 4. Trust Section (Large white card with stats) */}
-      <div className="layout-container pt-[72px]">
-        <div className="bg-white rounded-[16px] border border-[#8B4F24]/15 shadow-[0_10px_30px_rgba(0,0,0,0.02)] p-[24px] md:p-[32px] flex flex-col lg:flex-row items-center justify-between gap-[32px] text-center lg:text-left">
-          <div className="max-w-[520px] space-y-[20px] mx-auto lg:mx-0">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 pt-[72px]">
+        <div className="bg-white rounded-[16px] border border-[#8B4F24]/15 shadow-[0_10px_30px_rgba(0,0,0,0.02)] p-[24px] md:p-[32px] flex flex-col lg:flex-row items-center justify-between gap-[32px] text-left">
+          <div className="max-w-[520px] space-y-[20px]">
             <div>
               <span className="text-[12px] font-sans font-bold uppercase tracking-[0.2em] text-[#8B4F24] block mb-2">
                 Trusted Since 2008
               </span>
-              <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+              <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
                 Trusted by Thousands Across Tirupati
               </h2>
             </div>
@@ -269,13 +267,13 @@ export default function HomeView({
       </div>
 
       {/* 5. Categories Section */}
-      <div className="layout-container pt-[72px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 pt-[72px]">
         <div className="text-center max-w-2xl mx-auto mb-[32px] space-y-[20px]">
           <div>
             <span className="text-xs font-sans font-semibold uppercase tracking-[0.2em] text-[#8B4F24] inline-block mb-3">
               Our Specialties
             </span>
-            <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+            <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
               Discover Furniture for Every Space
             </h2>
             <div className="w-12 h-[1px] bg-[#8B4F24] mx-auto mt-3" />
@@ -298,7 +296,7 @@ export default function HomeView({
             { id: 'cat-dining-tables', icon: Utensils, label: 'Dining Tables', q: '' },
             { id: 'cat-tv-units', icon: Tv, label: 'TV Units', q: '' },
             { id: 'cat-swing-chairs', icon: Wind, label: 'Swing Chairs', q: '' },
-            { id: 'cat-bean-bags', icon: Armchair, label: 'Bean Bags', q: '' },
+            { id: 'cat-bean-bags', icon: Smile, label: 'Bean Bags', q: '' },
             { id: 'custom', icon: Ruler, label: 'Custom Furniture', q: '' }
           ].map((col) => (
             <button
@@ -328,13 +326,13 @@ export default function HomeView({
       </div>
 
       {/* 6. Featured Products Section */}
-      <div className="layout-container pt-[72px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 pt-[72px]">
         <div className="text-center max-w-2xl mx-auto mb-[32px] space-y-[20px]">
           <div>
             <span className="text-xs font-sans font-semibold uppercase tracking-[0.2em] text-[#8B4F24] inline-block mb-3">
               Signature Showroom Pieces
             </span>
-            <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+            <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
               Featured Masterpieces
             </h2>
             <div className="w-12 h-[1px] bg-[#8B4F24] mx-auto mt-3" />
@@ -350,14 +348,14 @@ export default function HomeView({
             {
               title: "Premium Wooden Beds",
               desc: "Elegant craftsmanship meets lasting durability. Built for comfort and built to last.",
-              image: "/featured-1.jpg",
+              image: "/images/custom-furniture.jpg",
               catId: "cat-beds",
               btnText: "Explore Beds"
             },
             {
               title: "Modern Wardrobes",
               desc: "Beautiful storage solutions that organize your space while enhancing your home.",
-              image: "/featured-2.jpg",
+              image: "/images/steel-cupboards.jpg",
               catId: "cat-wardrobes",
               btnText: "View Wardrobes"
             },
@@ -379,12 +377,12 @@ export default function HomeView({
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              <div className="w-full aspect-[4/3] sm:aspect-[4/5] md:aspect-[1/1] overflow-hidden bg-[#FAF8F5] relative">
+              <div className="w-full aspect-[4/3] overflow-hidden bg-stone-100 relative">
                 <img
                   src={item.image}
                   alt={item.title}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-103"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                 />
               </div>
               <div className="p-[24px] flex flex-col justify-between flex-grow">
@@ -407,13 +405,13 @@ export default function HomeView({
       </div>
 
       {/* 7. Why Choose Us Section */}
-      <div className="layout-container pt-[72px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 pt-[72px]">
         <div className="text-center max-w-2xl mx-auto mb-[32px] space-y-[20px]">
           <div>
             <span className="text-xs font-sans font-semibold uppercase tracking-[0.2em] text-[#8B4F24] inline-block mb-3">
               Our Values
             </span>
-            <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+            <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
               Why Families Trust BVS Enterprises
             </h2>
             <div className="w-12 h-[1px] bg-[#8B4F24] mx-auto mt-3" />
@@ -470,13 +468,13 @@ export default function HomeView({
       </div>
 
       {/* 8. About Preview Section */}
-      <div className="layout-container py-[48px] lg:py-[72px]">
-        <div className="grid grid-cols-1 lg:grid-cols-[48%_52%] items-center gap-[40px] lg:gap-[64px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 py-[48px] lg:py-[72px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[48%_52%] items-center gap-[24px] md:gap-[40px] lg:gap-[64px]">
           {/* Image Column (48%) */}
-          <div className="w-full shrink-0">
-            <div className="w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-video lg:aspect-auto lg:h-[500px] xl:h-[560px] relative rounded-[24px] overflow-hidden border border-black/[0.08]">
+          <div className="w-full flex items-center justify-center shrink-0">
+            <div className="w-full h-[280px] sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[560px] relative rounded-[24px] overflow-hidden border border-black/[0.08] aspect-[16/10] sm:aspect-[4/3] lg:aspect-auto">
               <img
-                src="/about-preview.jpg"
+                src="/about-main.jpg"
                 alt="Master Carpenter Workshop"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover"
@@ -484,19 +482,19 @@ export default function HomeView({
             </div>
           </div>
           {/* Content Column (52%) */}
-          <div className="w-full max-w-[600px] mx-auto lg:mx-0 flex flex-col justify-center text-center lg:text-left space-y-[24px]">
+          <div className="w-full max-w-[560px] flex flex-col justify-center text-left space-y-[24px]">
             <div className="space-y-[16px] md:space-y-[20px]">
               <span className="text-xs font-sans font-bold uppercase tracking-[0.2em] text-[#8B4F24] block">
                 Excellence in Woodcraft Since 2008
               </span>
-              <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+              <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
                 Timeless Custom Elegance Built to Last Generations
               </h2>
               <p className="text-[#6F6F6F] text-[16px] font-sans font-normal leading-[1.7] max-w-[560px]">
                 At BVS Enterprises, we believe furniture is not just functional, it is the soul of your home. Established in 2008 in the spiritual hub of Tirupati, we have spent more than 15 years sourcing premier logs, employing veteran wood carvers, and custom tailoring beautiful setups for hundreds of local homes and business hubs.
               </p>
             </div>
-            <div className="flex justify-center lg:justify-start">
+            <div>
               <button
                 onClick={() => {
                   setActiveTab('about');
@@ -512,13 +510,13 @@ export default function HomeView({
       </div>
 
       {/* 9. Visit Showroom Section */}
-      <div id="visit-showroom" className="layout-container pt-[72px]">
+      <div id="visit-showroom" className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 pt-[72px]">
         <div className="text-center max-w-2xl mx-auto mb-[32px] space-y-[20px]">
           <div>
             <span className="text-xs font-sans font-semibold uppercase tracking-[0.2em] text-[#8B4F24] inline-block mb-3">
               Experience Our Craft
             </span>
-            <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+            <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
               Visit Our Luxury Showroom
             </h2>
             <div className="w-12 h-[1px] bg-[#8B4F24] mx-auto mt-3" />
@@ -533,13 +531,13 @@ export default function HomeView({
       </div>
 
       {/* 10. Testimonials Section */}
-      <div className="layout-container pt-[72px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 pt-[72px]">
         <div className="text-center max-w-2xl mx-auto mb-[32px] space-y-[20px]">
           <div>
             <span className="text-xs font-sans font-semibold uppercase tracking-[0.2em] text-[#8B4F24] inline-block mb-3">
               Customer Stories
             </span>
-            <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+            <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
               Loved by Generations of Families
             </h2>
             <div className="w-12 h-[1px] bg-[#8B4F24] mx-auto mt-3" />
@@ -596,9 +594,9 @@ export default function HomeView({
       </div>
 
       {/* 11. Final CTA Section */}
-      <div className="layout-container pt-[72px] pb-[72px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 pt-[72px] pb-[72px]">
         <div className="relative rounded-[16px] overflow-hidden bg-[#EFE8DF] text-[#222222] p-8 sm:p-12 lg:p-16 text-center border-2 border-[#8B4F24]/20 shadow-[0_10px_30px_rgba(139,79,36,0.04)] hover:-translate-y-[4px] hover:shadow-[0_16px_36px_rgba(139,79,36,0.1)] hover:border-[#8B4F24]/40 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] cursor-default">
-          <div className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-multiply pointer-events-none" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&auto=format&fit=crop&q=80')" }} />
+          <div className="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-multiply pointer-events-none" style={{ backgroundImage: "url('/about-main.jpg')" }} />
           
           <div className="relative z-10 max-w-2xl mx-auto space-y-[24px]">
             <div className="space-y-[12px]">
@@ -606,7 +604,7 @@ export default function HomeView({
                 BVS Enterprises • Premium Since 2008
               </span>
               
-              <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+              <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
                 Ready to Transform Your Space?
               </h2>
             </div>

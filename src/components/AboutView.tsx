@@ -42,7 +42,7 @@ export default function AboutView({
     <div className="bg-[#FAF8F5] selection:bg-[#6B3E1F] selection:text-white pb-20 text-[#222222]">
       
       {/* 1. HERO SECTION: "Crafting Spaces. Building Trust Since 2008" */}
-      <div className="layout-container py-[48px] lg:py-[72px] text-left">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 py-[48px] lg:py-[72px] text-left">
         <div className="grid grid-cols-1 lg:grid-cols-[52%_48%] items-center gap-[32px] lg:gap-[64px]">
           
           {/* Left Text Content (52% width) */}
@@ -121,7 +121,7 @@ export default function AboutView({
           >
             <div className="w-full h-[280px] sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[560px] relative rounded-[24px] overflow-hidden border border-[#E3D9CE] shadow-2xl bg-[#E3D9CE] aspect-[16/10] sm:aspect-[4/3] lg:aspect-auto">
               <img 
-                src="/about-main.jpg"
+                src="/about-preview.jpg"
                 alt="BVS Enterprises Premium Furniture Showroom" 
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-103"
@@ -139,7 +139,7 @@ export default function AboutView({
 
       {/* 2. OUR STORY SECTION */}
       <div className="bg-white border-y border-[#E3D9CE]/40 py-[48px] lg:py-[72px] text-left">
-        <div className="layout-container">
+        <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-[48%_52%] items-center gap-[32px] lg:gap-[64px]">
             
             {/* Left Storefront Photo (48% width) */}
@@ -154,6 +154,7 @@ export default function AboutView({
                 <img 
                   src="/bvs-storefront.jpg"
                   alt="BVS Showroom Exterior Storefront" 
+                  referrerPolicy="no-referrer"
                   className="absolute inset-0 w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700 hover:scale-103"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent pointer-events-none" />
@@ -180,7 +181,7 @@ export default function AboutView({
                   <div className="h-[1px] w-12 bg-[#8B4F24]/40" />
                 </div>
                 
-                <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+                <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
                   A Journey Built on Quality <br className="hidden sm:inline" />
                   and Customer Trust
                 </h2>
@@ -201,7 +202,7 @@ export default function AboutView({
                     setActiveTab('products');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="btn-base btn-primary gap-2"
+                  className="bg-[#8B4F24] hover:bg-[#5C3315] text-[#FAF8F5] font-sans font-bold text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-[0_4px_12px_rgba(139,79,36,0.12)] hover:shadow-[0_8px_20px_rgba(139,79,36,0.2)] hover:-translate-y-[2px] flex items-center justify-center gap-2 cursor-pointer border-none inline-flex"
                 >
                   <span>Visit Our Showroom</span>
                   <ArrowRight className="w-4 h-4" />
@@ -214,7 +215,7 @@ export default function AboutView({
       </div>
 
       {/* 3. FOUR-COLUMN STATS BAR */}
-      <div className="layout-container py-[72px] text-center">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 py-[72px] text-center">
         <div className="grid grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-4 gap-[24px]">
           
           {/* Stat 1 */}
@@ -290,7 +291,7 @@ export default function AboutView({
 
       {/* 4. OUR VALUES SECTION */}
       <div className="bg-[#FAF8F5] border-y border-[#E3D9CE]/50 py-[72px] text-center">
-        <div className="layout-container">
+        <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20">
           
           <div className="space-y-[20px] mb-[32px]">
             <div className="flex items-center justify-center gap-3">
@@ -300,7 +301,7 @@ export default function AboutView({
               </span>
               <div className="h-[1px] w-8 bg-[#8B4F24]/40" />
             </div>
-            <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+            <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
               What Drives Us Every Day
             </h2>
             <p className="text-[#6F6F6F] text-[16px] font-sans font-normal leading-[1.8] max-w-[520px] mx-auto">
@@ -412,7 +413,7 @@ export default function AboutView({
       </div>
 
       {/* 5. LET'S CONNECT BANNER */}
-      <div className="layout-container py-[72px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 py-[72px]">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -428,7 +429,7 @@ export default function AboutView({
               <span className="text-xs font-sans font-bold uppercase tracking-[0.25em] text-[#8B4F24]">
                 LET'S CONNECT
               </span>
-              <h2 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight group-hover:text-[#8B4F24] transition-colors">
+              <h2 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight group-hover:text-[#8B4F24] transition-colors">
                 We're Here to <br /> Help You
               </h2>
             </div>

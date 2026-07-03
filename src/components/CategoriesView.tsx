@@ -72,7 +72,7 @@ const CATEGORIES_DATA: CategoryItem[] = [
     id: 'study-tables',
     name: 'Study Tables',
     description: 'Compact and spacious study desks featuring integrated storage shelves for books and laptops.',
-    image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=1000&auto=format&fit=crop&q=80',
+    image: '/images/office-furniture.jpg',
     subItems: ['Study Tables', 'Study Desks', 'Student Chairs']
   },
   {
@@ -114,7 +114,7 @@ const CATEGORIES_DATA: CategoryItem[] = [
     id: 'mattresses',
     name: 'Mattresses',
     description: 'Orthopedic posture foam, high-density coir, and luxury spring mattresses.',
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1000&auto=format&fit=crop&q=80',
+    image: '/images/custom-furniture.jpg',
     subItems: ['Single Mattresses', 'Double Mattresses', 'Orthopedic Mattresses', 'Foam Mattresses', 'Spring Mattresses']
   },
   {
@@ -128,7 +128,7 @@ const CATEGORIES_DATA: CategoryItem[] = [
     id: 'swing-chairs',
     name: 'Swing Chairs',
     description: 'Relaxing hand-woven indoor cane swings, hanging single cocoons, and metallic support swings.',
-    image: '/images/swing-chairs.jpg',
+    image: '/contact-main.jpg',
     subItems: ['Hanging Swing Chairs', 'Indoor Swings', 'Cane Swings']
   },
   {
@@ -177,7 +177,7 @@ export default function CategoriesView({ settings, setActiveTab }: CategoriesVie
   };
 
   return (
-    <div className="bg-[#FAF8F5] pb-20 pt-10 layout-container text-left animate-in fade-in duration-300">
+    <div className="bg-[#FAF8F5] pb-20 pt-10 px-5 md:px-10 lg:px-20 max-w-[1280px] mx-auto text-left animate-in fade-in duration-300">
       
       {/* Editorial Top Header */}
       <div className="border-b border-[#ECE5DD] pb-8 mb-12 space-y-4">
@@ -205,16 +205,16 @@ export default function CategoriesView({ settings, setActiveTab }: CategoriesVie
             id={item.id}
             variants={itemVariants}
             onClick={() => handleEnquire(item.name)}
-            className="group bg-white rounded-[16px] overflow-hidden border border-[#8B4F24]/15 shadow-[0_4px_20px_rgba(139,79,36,0.02)] hover:border-[#8B4F24]/40 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(139,79,36,0.06)] focus:outline-none focus:ring-1 focus:ring-[#8B4F24]/30 [-webkit-tap-highlight-color:transparent] transition-all duration-300 flex flex-col justify-between h-full cursor-pointer text-left scroll-mt-24"
+            className="group bg-white rounded-[16px] overflow-hidden border border-[#8B4F24]/15 shadow-[0_4px_20px_rgba(139,79,36,0.02)] hover:border-[#8B4F24]/40 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(139,79,36,0.06)] transition-all duration-300 flex flex-col justify-between h-full cursor-pointer text-left scroll-mt-24"
           >
             <div>
-              {/* Image box with a uniform square aspect ratio for professional presentation */}
-              <div className="aspect-square overflow-hidden bg-stone-100 relative border-b border-[#ECE5DD]/50">
+              {/* Image box with exactly 16:10 aspect ratio */}
+              <div className="aspect-[16/10] overflow-hidden bg-stone-100 relative">
                 <img
                   src={item.image}
                   alt={item.name}
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center select-none transition-transform duration-700 ease-out group-hover:scale-110"
+                  className="w-full h-full object-cover select-none transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 />
               </div>
 
@@ -269,13 +269,13 @@ export default function CategoriesView({ settings, setActiveTab }: CategoriesVie
               setActiveTab('contact');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="btn-base btn-primary"
+            className="bg-[#8B4F24] hover:bg-[#5C3315] text-white font-sans font-bold text-xs uppercase tracking-widest h-12 px-6 rounded-full transition-all duration-300 hover:-translate-y-[2px]"
           >
             Visit Showroom
           </button>
           <a
             href="tel:+918520856709"
-            className="btn-base btn-secondary gap-1.5"
+            className="bg-white hover:bg-stone-50 text-[#8B4F24] border border-[#8B4F24]/30 font-sans font-bold text-xs uppercase tracking-widest h-12 px-6 rounded-full transition-all duration-300 inline-flex items-center justify-center gap-1.5"
           >
             <Phone className="w-3.5 h-3.5" />
             <span>Call Showroom</span>

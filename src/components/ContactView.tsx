@@ -155,7 +155,7 @@ export default function ContactView({
       
       {/* 1. Luxurious Hero Header Section */}
       <div className="bg-[#FAF8F5] pt-[48px] lg:pt-[72px] pb-[40px] text-left">
-        <div className="layout-container">
+        <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-[52%_48%] items-center gap-[32px] lg:gap-[64px]">
             
             {/* Left Text Column */}
@@ -182,7 +182,7 @@ export default function ContactView({
               <div className="flex flex-wrap gap-[16px] pt-2">
                 <button 
                   onClick={handleWhatsAppInstantGeneral}
-                  className="btn-base btn-primary w-full sm:w-auto gap-2"
+                  className="w-full sm:w-auto bg-[#8B4F24] hover:bg-[#5C3315] text-[#FAF8F5] font-sans font-bold text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-[0_4px_12px_rgba(139,79,36,0.12)] hover:shadow-[0_8px_20px_rgba(139,79,36,0.2)] hover:-translate-y-[2px] flex items-center justify-center gap-2 cursor-pointer border-none"
                 >
                   <MessageSquare className="w-4 h-4" />
                   <span>Instant WhatsApp Inquiry</span>
@@ -223,7 +223,7 @@ export default function ContactView({
       </div>
 
       {/* 2. Main Double-Column Layout */}
-      <div className="layout-container py-[40px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 py-[40px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[24px] items-stretch">
           
           {/* Left Panel: Contact Form */}
@@ -382,7 +382,7 @@ export default function ContactView({
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="btn-base btn-primary w-full gap-2"
+                      className="w-full bg-[#8B4F24] hover:bg-[#5C3315] disabled:bg-stone-400 text-white font-sans font-bold text-xs uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-[0_4px_12px_rgba(139,79,36,0.12)] hover:shadow-[0_8px_20px_rgba(139,79,36,0.2)] hover:-translate-y-[2px] flex items-center justify-center gap-2 cursor-pointer border-none"
                     >
                       {isSubmitting ? (
                         <>
@@ -521,7 +521,7 @@ export default function ContactView({
       </div>
 
       {/* 3. Refined Location & Google Map Segment */}
-      <div className="layout-container py-[40px]">
+      <div className="max-w-[1280px] mx-auto px-5 md:px-10 lg:px-20 py-[40px]">
         <div className="bg-white rounded-[16px] border border-[#8B4F24]/15 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:border-[#8B4F24]/40 hover:-translate-y-[2px] hover:shadow-[0_12px_32px_rgba(139,79,36,0.06)] transition-all duration-300 p-[24px] md:p-[32px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[48px] items-center text-left group">
           
           {/* Map Column (lg:col-span-7) */}
@@ -548,7 +548,7 @@ export default function ContactView({
               Find Us Easily
             </span>
             
-            <h3 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
+            <h3 className="font-serif font-semibold text-[30px] md:text-[36px] lg:text-[40px] leading-tight text-[#222222] tracking-tight">
               Located on the Main <br />
               Tirupati Bypass Road
             </h3>

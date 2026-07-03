@@ -53,7 +53,7 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
     "@context": "https://schema.org",
     "@type": "FurnitureStore",
     "name": businessName,
-    "image": "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=1200&auto=format&fit=crop&q=80",
+    "image": "/bvs-storefront.jpg",
     "@id": "https://bvsenterprises.in/#showroom",
     "url": window.location.origin,
     "telephone": displayPhone1,
@@ -101,7 +101,7 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
         </>
       )}
 
-      <div className={hideHeader ? "w-full relative z-10" : "layout-container relative z-10"}>
+      <div className={hideHeader ? "w-full relative z-10" : "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"}>
         
         {/* Section Header */}
         {!hideHeader && (
@@ -299,11 +299,11 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
                   href={mapSearchUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-base btn-primary w-full gap-2 group/btn"
+                  className="w-full bg-[#2E2A27] hover:bg-[#1C1A18] text-[#FAF8F5] text-xs font-semibold uppercase tracking-wider py-4 px-6 rounded-2xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group/btn cursor-pointer"
                 >
                   <MapPin className="w-4.5 h-4.5 text-[#C39A6B] group-hover/btn:scale-110 transition-transform" />
                   <span>Get Directions in Google Maps</span>
-                  <ChevronRight className="w-4 h-4 text-[#C39A6B] group-hover/btn:translate-x-1 transition-transform" />
+                  <ChevronRight className="w-4 h-4 text-stone-400 group-hover/btn:translate-x-1 transition-transform" />
                 </a>
  
               </div>
