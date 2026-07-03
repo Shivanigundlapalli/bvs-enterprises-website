@@ -379,7 +379,7 @@ export default function HomeView({
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
             >
-              <div className="w-full aspect-[4/3] sm:aspect-[4/5] md:aspect-[1/1] overflow-hidden bg-[#FAF8F5] relative">
+              <div className="w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden bg-[#FAF8F5] relative">
                 <img
                   src={item.image}
                   alt={item.title}
