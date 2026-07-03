@@ -479,7 +479,7 @@ export default function HomeView({
                 src="/about-preview.jpg"
                 alt="Master Carpenter Workshop"
                 referrerPolicy="no-referrer"
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
               />
             </div>
           </div>
