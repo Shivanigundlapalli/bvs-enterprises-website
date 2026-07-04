@@ -27,6 +27,7 @@ import HomeView from './components/HomeView';
 import ContactView from './components/ContactView';
 import AboutView from './components/AboutView';
 import CategoriesView from './components/CategoriesView';
+import NotFoundView from './components/NotFoundView';
 
 // Icons
 import {
@@ -122,10 +123,11 @@ const CAROUSEL_SLIDES = [
 export default function App() {
   const [activeTab, setActiveTabState] = useState<string>(() => {
     const path = window.location.pathname;
+    if (path === '/' || path === '') return 'home';
     if (path.includes('/about')) return 'about';
     if (path.includes('/furniture')) return 'products';
     if (path.includes('/contact')) return 'contact';
-    return 'home';
+    return 'not-found';
   });
 
   const setActiveTab = (tab: string) => {
@@ -143,10 +145,11 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const path = window.location.pathname;
-      if (path.includes('/about')) setActiveTabState('about');
+      if (path === '/' || path === '') setActiveTabState('home');
+      else if (path.includes('/about')) setActiveTabState('about');
       else if (path.includes('/furniture')) setActiveTabState('products');
       else if (path.includes('/contact')) setActiveTabState('contact');
-      else setActiveTabState('home');
+      else setActiveTabState('not-found');
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
@@ -416,6 +419,11 @@ export default function App() {
             handleGeneralContactSubmit={handleGeneralContactSubmit}
             handleWhatsAppInstantGeneral={handleWhatsAppInstantGeneral}
           />
+        )}
+
+        {/* Route 6: 404 NOT FOUND */}
+        {activeTab === 'not-found' && (
+          <NotFoundView setActiveTab={setActiveTab} />
         )}
 
       </main>
