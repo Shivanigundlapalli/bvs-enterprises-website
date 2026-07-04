@@ -164,7 +164,7 @@ export default function HomeView({
           <div className="w-full relative shrink-0">
             <div className="absolute inset-0 bg-[#8B4F24]/5 rounded-[24px] transform translate-x-3 translate-y-3 sm:translate-x-4 sm:translate-y-4 pointer-events-none"></div>
             
-            <div className="relative rounded-[24px] overflow-hidden border border-[#ECE5DD] shadow-[0_10px_30px_rgba(0,0,0,0.05)] w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-video lg:aspect-auto lg:h-[500px] xl:h-[560px] bg-stone-100 group">
+            <div className="relative rounded-[24px] overflow-hidden border border-[#ECE5DD] shadow-[0_10px_30px_rgba(0,0,0,0.05)] w-full aspect-[16/11] sm:aspect-[16/10] md:aspect-video lg:aspect-auto lg:h-[500px] xl:h-[560px] bg-stone-100 group">
               {carouselSlides.map((slide, idx) => (
                 <div
                   key={idx}
