@@ -181,11 +181,11 @@ export default function HomeView({
                   <div className="absolute inset-0 bg-gradient-to-t from-[#222222]/50 via-transparent to-transparent"></div>
                   
                   {/* Caption overlay */}
-                  <div className="absolute bottom-6 left-5 sm:left-6 right-[110px] sm:right-32 text-left text-[#FAF8F5]">
-                    <span className="text-[9px] font-sans font-bold tracking-widest uppercase text-[#FAF8F5]/80 block mb-1">
+                  <div className="absolute bottom-6 left-5 sm:left-6 right-[130px] sm:right-[150px] text-left text-[#FAF8F5]">
+                    <span className="text-[8px] sm:text-[9px] font-sans font-bold tracking-widest uppercase text-[#FAF8F5]/80 block mb-1">
                       Signature Collection
                     </span>
-                    <p className="text-xs sm:text-sm text-white font-sans max-w-md font-medium leading-tight sm:leading-normal pr-2 sm:pr-0">
+                    <p className="text-[11px] sm:text-sm text-white font-sans max-w-md font-medium leading-snug sm:leading-normal">
                       {slide.headline}: {slide.tagline}
                     </p>
                   </div>
