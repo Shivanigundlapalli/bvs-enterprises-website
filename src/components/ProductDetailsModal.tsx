@@ -142,7 +142,7 @@ export default function ProductDetailsModal({
                       activeImage === img ? 'border-[#8B4F24] scale-95 shadow-sm' : 'border-black/[0.08] hover:border-[#8B4F24]'
                     }`}
                   >
-                    <img src={img} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`Thumbnail ${idx}`} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   </button>
                 ))}
               </div>
@@ -381,7 +381,7 @@ export default function ProductDetailsModal({
                     className="cursor-pointer group bg-[#FAF8F5] border border-black/[0.08] hover:bg-white hover:border-[#8B4F24] p-3 text-center rounded-[16px] shadow-sm hover:shadow-md transition-all duration-300"
                   >
                     <div className="aspect-video sm:aspect-square overflow-hidden bg-white rounded-[12px] border border-black/[0.04]">
-                      <img src={p.images[0]} alt={p.name} className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300" />
+                      <img src={p.images[0]} alt={p.name} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300" />
                     </div>
                     <div className="p-2 space-y-1">
                       <span className="text-[8.5px] uppercase tracking-wider font-bold font-sans text-[#8B4F24] block">

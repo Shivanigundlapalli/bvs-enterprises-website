@@ -120,7 +120,76 @@ const CAROUSEL_SLIDES = [
 ];
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<string>('home');
+  const [activeTab, setActiveTabState] = useState<string>(() => {
+    const path = window.location.pathname;
+    if (path.includes('/about')) return 'about';
+    if (path.includes('/furniture')) return 'products';
+    if (path.includes('/contact')) return 'contact';
+    return 'home';
+  });
+
+  const setActiveTab = (tab: string) => {
+    setActiveTabState(tab);
+    let path = '/';
+    if (tab === 'about') path = '/about';
+    if (tab === 'products') path = '/furniture';
+    if (tab === 'contact') path = '/contact';
+    if (window.location.pathname !== path) {
+      window.history.pushState({}, '', path);
+    }
+  };
+
+  // Listen to browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      if (path.includes('/about')) setActiveTabState('about');
+      else if (path.includes('/furniture')) setActiveTabState('products');
+      else if (path.includes('/contact')) setActiveTabState('contact');
+      else setActiveTabState('home');
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  // Dynamic SEO Manager
+  useEffect(() => {
+    let title = 'BVS Enterprises | Premium Furniture Showroom in Tirupati';
+    let description = 'Discover premium furniture at BVS Enterprises, Tirupati. Explore beds, wardrobes, sofas, office furniture, dining tables, bean bags, swing chairs, mattresses, and custom furniture solutions.';
+    let canonical = 'https://bvsenterprises.in/';
+    
+    if (activeTab === 'about') {
+      title = 'About BVS Enterprises | Trusted Furniture Showroom Since 2008';
+      description = 'Learn about BVS Enterprises, a trusted furniture showroom in Tirupati offering quality furniture for homes and offices since 2008.';
+      canonical = 'https://bvsenterprises.in/about';
+    } else if (activeTab === 'products') {
+      title = 'Furniture Collection | Beds, Sofas, Office Chairs, Wardrobes | BVS Enterprises';
+      canonical = 'https://bvsenterprises.in/furniture';
+    } else if (activeTab === 'contact') {
+      title = 'Contact BVS Enterprises | Furniture Showroom in Tirupati';
+      canonical = 'https://bvsenterprises.in/contact';
+    }
+
+    document.title = title;
+    
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', description);
+    
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', title);
+    
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', description);
+    
+    const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute('content', title);
+    
+    const twitterDesc = document.querySelector('meta[property="twitter:description"]');
+    if (twitterDesc) twitterDesc.setAttribute('content', description);
+
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) canonicalLink.setAttribute('href', canonical);
+  }, [activeTab]);
   const [isAdmin, setIsAdmin] = useState<boolean>(false); // Unused admin hooks to keep Navbar props compliant
 
   // Hero Carousel State

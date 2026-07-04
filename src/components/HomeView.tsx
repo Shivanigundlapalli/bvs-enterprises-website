@@ -175,6 +175,8 @@ export default function HomeView({
                   <img
                     src={slide.image}
                     alt={slide.headline}
+                    loading={idx === 0 ? "eager" : "lazy"}
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-center select-none transition-transform duration-[6000ms] ease-out scale-100 group-hover:scale-103"
                   />
@@ -383,6 +385,8 @@ export default function HomeView({
                 <img
                   src={item.image}
                   alt={item.title}
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-103"
                 />
@@ -478,6 +482,8 @@ export default function HomeView({
               <img
                 src="/about-preview.jpg"
                 alt="Master Carpenter Workshop"
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out hover:scale-[1.03]"
               />

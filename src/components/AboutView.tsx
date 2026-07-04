@@ -123,6 +123,8 @@ export default function AboutView({
               <img 
                 src="/about-main.jpg"
                 alt="BVS Enterprises Premium Furniture Showroom" 
+                loading="eager"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 hover:scale-103"
               />
@@ -154,6 +156,8 @@ export default function AboutView({
                 <img 
                   src="/bvs-storefront.jpg"
                   alt="BVS Showroom Exterior Storefront" 
+                  loading="lazy"
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700 hover:scale-103"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent pointer-events-none" />
