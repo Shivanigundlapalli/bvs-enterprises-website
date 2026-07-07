@@ -248,7 +248,7 @@ export default function Footer({ setActiveTab, settings }: FooterProps) {
               <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-[14px] text-center sm:text-left">
                 <MapPin className="h-[18px] w-[18px] text-[#FAF8F5]/60 sm:mt-1 shrink-0 mx-auto sm:mx-0" />
                 <span className="text-[16px] leading-[24px] text-[#E3D9CE]">
-                  Tirupati Bypass Rd, opposite Reliance Petrol bunk, Tirupati, AP 517501
+                  BVS Enterprises, Near Sridevi Complex, Beside SBI ATM, OPP Muthoottu Mini Financiers, Tilak Road, Tirupati - 517501
                 </span>
               </li>
               <li className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-[14px] text-center sm:text-left">

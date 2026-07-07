@@ -32,10 +32,10 @@ export default function AboutView({
   handleWhatsAppInstantGeneral
 }: AboutViewProps) {
   
-  const displayAddress = "BVS Enterprises, Near Best Price, Tirupati Bypass Road, Tirupati, Andhra Pradesh - 517501";
-  const displayPhone = "+91 85208 56709";
-  const displayWhatsApp = "+91 85208 56709";
-  const displayEmail = "bvsenterprises@example.com";
+  const displayAddress = "BVS Enterprises, Near Sridevi Complex, Beside SBI ATM, OPP Muthoottu Mini Financiers, Tilak Road, Tirupati - 517501";
+  const displayPhone1 = settings?.phone_number || "+91 85208 56709";
+  const displayPhone2 = "+91 92469 97709";
+  const displayEmail = "bvsenterprises0877@gmail.com";
   const displayHours = "Mon - Sun: 9:00 AM - 9:00 PM";
 
   return (

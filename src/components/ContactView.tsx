@@ -108,11 +108,11 @@ export default function ContactView({
     }
   };
 
-  const displayAddress = "BVS Enterprises, Near Best Price, Tirupati Bypass Road, Tirupati, Andhra Pradesh - 517501";
-  const displayPhone = "+91 85208 56709";
-  const displayWhatsApp = "+91 85208 56709";
-  const displayEmail = "support@bvsenterprises.co";
-  const displayHours = "Mon - Sun: 9:00 AM - 9:00 PM";
+  const displayAddress = "BVS Enterprises, Near Sridevi Complex, Beside SBI ATM, OPP Muthoottu Mini Financiers, Tilak Road, Tirupati - 517501";
+  const displayPhone1 = settings?.phone_number || "+91 85208 56709";
+  const displayPhone2 = "+91 92469 97709";
+  const displayEmail = "bvsenterprises0877@gmail.com";
+  const displayHours = settings?.business_hours || "10:00 AM – 9:00 PM (Open All Days)";
 
   const handleCopyAddress = () => {
     navigator.clipboard.writeText(displayAddress);
@@ -212,7 +212,7 @@ export default function ContactView({
                     <p className="font-serif font-bold text-sm">Burmese Teakwood Showcase Room</p>
                   </div>
                   <span className="text-[10px] font-mono py-1.5 px-3 bg-white/10 backdrop-blur-md rounded-full border border-white/10">
-                    📍 Tirupati Bypass
+                    📍 Tilak Road, Tirupati
                   </span>
                 </div>
               </div>
@@ -527,7 +527,7 @@ export default function ContactView({
           {/* Map Column (lg:col-span-7) */}
           <div className="lg:col-span-7 h-[320px] sm:h-[400px] rounded-[16px] overflow-hidden border border-black/[0.08] relative group">
             <iframe 
-              src="https://maps.google.com/maps?q=BVS%20Enterprises,%20Near%20Best%20Price,%20Tirupati,%20Andhra%20Pradesh,%20India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=BVS%20Enterprises,%20Tilak%20Road,%20Tirupati&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -538,7 +538,7 @@ export default function ContactView({
               className="w-full h-full grayscale-[15%] group-hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl text-[10px] font-sans font-bold uppercase tracking-wider text-[#8B4F24] border border-black/[0.04] shadow-sm">
-              📍 Near Best Price, Tirupati Bypass
+              📍 Near Sridevi Complex, Tilak Road
             </div>
           </div>
 

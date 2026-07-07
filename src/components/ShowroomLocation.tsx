@@ -31,11 +31,11 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
   const [copied, setCopied] = useState(false);
 
   const businessName = "BVS Enterprises";
-  const displayAddress = settings?.address || "Door No. 400, Tilak Road, Tirupati, Andhra Pradesh, India.";
-  const displayLandmark = settings?.address_landmark || "SBI ATM";
+  const displayAddress = settings?.address || "BVS Enterprises, Near Sridevi Complex, Beside SBI ATM, OPP Muthoottu Mini Financiers, Tilak Road, Tirupati - 517501";
+  const displayLandmark = settings?.address_landmark || "Near Sridevi Complex, Beside SBI ATM, Tilak Road";
   const displayPhone1 = settings?.phone_number || "+91 85208 56709";
   const displayPhone2 = "+91 92469 97709";
-  const displayEmail = "sales@bvsenterprises.in";
+  const displayEmail = "bvsenterprises0877@gmail.com";
   const displayHours = settings?.business_hours || "10:00 AM – 9:00 PM (Open All Days)";
 
   // Premium, highly specific directions/search URLs that open perfectly in Google Maps on all devices
@@ -60,9 +60,8 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Door No. 400, Tilak Road",
+      "streetAddress": "Near Sridevi Complex, Beside SBI ATM, OPP Muthoottu Mini Financiers, Tilak Road",
       "addressLocality": "Tirupati",
-      "addressRegion": "Andhra Pradesh",
       "postalCode": "517501",
       "addressCountry": "IN"
     },
