@@ -113,6 +113,7 @@ export default function ContactView({
   const displayPhone1 = settings?.phone_number || "+91 85208 56709";
   const displayPhone2 = "+91 92469 97709";
   const displayEmail = "bvsenterprises0877@gmail.com";
+  const displayWhatsApp = settings?.whatsapp_number || "+91 85208 56709";
   const displayHours = settings?.business_hours || "10:00 AM – 9:00 PM (Open All Days)";
 
   const handleCopyAddress = () => {
