@@ -568,11 +568,7 @@ export default function ContactView({
               referrerPolicy="no-referrer-when-downgrade"
               title="BVS Enterprises Tirupati Map"
               className="w-full h-full grayscale-[5%] group-hover:grayscale-0 transition-all duration-700"
-            >
-              <div className="w-full h-full flex items-center justify-center bg-stone-100 text-stone-500 font-sans text-sm">
-                Unable to load map. Please check your connection.
-              </div>
-            </iframe>
+            />
           </div>
 
           {/* Guide Column (lg:col-span-5) */}

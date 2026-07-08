@@ -193,11 +193,7 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
                 referrerPolicy="no-referrer-when-downgrade"
                 title={`${businessName} Showroom on Google Map`}
                 className="w-full h-full min-h-[420px] grayscale-[5%] hover:grayscale-0 transition-all duration-700 font-sans flex-grow"
-              >
-                <div className="w-full h-full flex items-center justify-center bg-stone-100 text-stone-500 font-sans text-sm">
-                  Unable to load map. Please check your connection.
-                </div>
-              </iframe>
+              />
             </div>
           </motion.div>
  
