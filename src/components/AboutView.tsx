@@ -36,6 +36,7 @@ export default function AboutView({
   const displayPhone1 = settings?.phone_number || "+91 85208 56709";
   const displayPhone2 = "+91 92469 97709";
   const displayEmail = "bvsenterprises0877@gmail.com";
+  const displayWhatsApp = settings?.whatsapp_number || "+91 85208 56709";
   const displayHours = "Mon - Sun: 9:00 AM - 9:00 PM";
 
   return (
