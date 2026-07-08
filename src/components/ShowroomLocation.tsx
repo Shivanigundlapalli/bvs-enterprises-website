@@ -39,8 +39,11 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
   const displayHours = settings?.business_hours || "10:00 AM – 9:00 PM (Open All Days)";
 
   // Premium, highly specific directions/search URLs that open perfectly in Google Maps on all devices
-  const mapSearchUrl = `https://www.google.com/maps/dir/?api=1&destination=BVS+Enterprises,+Tilak+Road,+Opposite+SBI+ATM,+Tirupati,+Andhra+Pradesh+517501`;
-  const embedMapUrl = `https://maps.google.com/maps?q=BVS%20Enterprises,%20Tilak%20Road,%20Tirupati,%20Andhra%20Pradesh,%20India&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+  const exactAddress = "BVS ENTERPRISES, Near Sridevi Complex, Beside SBI ATM, Opp Muthoottu Mini Financiers, Tilak Road, Tirupati, Andhra Pradesh 517501, India";
+  const encodedAddress = "BVS%20ENTERPRISES%2C%20Near%20Sridevi%20Complex%2C%20Beside%20SBI%20ATM%2C%20Opp%20Muthoottu%20Mini%20Financiers%2C%20Tilak%20Road%2C%20Tirupati%2C%20Andhra%20Pradesh%20517501%2C%20India";
+  const mapSearchUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`;
+  const mapPlaceUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+  const embedMapUrl = `https://maps.google.com/maps?q=${encodedAddress}&t=&z=17&ie=UTF8&iwloc=&output=embed`;
 
   const handleCopyAddress = () => {
     navigator.clipboard.writeText(`${businessName}, ${displayAddress} Landmark: Opposite ${displayLandmark}`);
@@ -148,22 +151,36 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
           >
             <div className="relative bg-white p-2.5 rounded-3xl border border-[#8B4F24]/15 hover:border-[#8B4F24]/40 hover:-translate-y-[2px] hover:shadow-[0_12px_32px_rgba(139,79,36,0.06)] transition-all duration-300 shadow-[0_4px_20px_rgba(139,79,36,0.02)] group overflow-hidden w-full h-[450px] lg:h-full lg:min-h-[520px] flex flex-col">
               
-              {/* Premium Inner Map Label overlay */}
-              <div className="absolute top-6 left-6 z-10 bg-[#2E2A27]/90 text-white font-sans text-xs px-4 py-2 rounded-xl shadow-lg backdrop-blur-md flex items-center gap-2 border border-white/10">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Flagship Tirupati Outlet</span>
+              {/* Custom Premium Map Overlay Card */}
+              <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-black/5 max-w-[260px] sm:max-w-[300px]">
+                <h4 className="font-serif font-bold text-[#2E2A27] text-base sm:text-lg mb-1 tracking-tight">BVS ENTERPRISES</h4>
+                <p className="text-[11px] sm:text-xs text-[#6E6A66] font-sans leading-relaxed mb-4">
+                  Near Sridevi Complex, Beside SBI ATM,<br/>
+                  Opp Muthoottu Mini Financiers,<br/>
+                  Tilak Road, Tirupati,<br/>
+                  Andhra Pradesh – 517501, India
+                </p>
+                <div className="flex flex-col gap-2">
+                  <a 
+                    href={mapSearchUrl} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="flex items-center justify-center gap-2 w-full bg-[#A86A33] hover:bg-[#915B29] text-white text-[11px] sm:text-xs font-semibold py-2.5 px-4 rounded-xl transition-colors shadow-md"
+                  >
+                    <span>Get Directions</span>
+                    <MapPin className="w-3.5 h-3.5" />
+                  </a>
+                  <a 
+                    href={mapPlaceUrl} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="flex items-center justify-center gap-2 w-full bg-white hover:bg-stone-50 text-[#2E2A27] border border-[#E2D9CC] text-[11px] sm:text-xs font-semibold py-2.5 px-4 rounded-xl transition-colors shadow-sm"
+                  >
+                    <span>Open in Google Maps</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                </div>
               </div>
- 
-              {/* Get Directions Quick Floating Badge */}
-              <a 
-                href={mapSearchUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="absolute bottom-6 right-6 z-10 bg-[#A86A33] hover:bg-[#915B29] text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-lg flex items-center gap-1.5 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]"
-              >
-                <span>Open in Google Maps</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
  
               {/* The Iframe Map */}
               <iframe 
@@ -175,8 +192,12 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
                 title={`${businessName} Showroom on Google Map`}
-                className="w-full h-full min-h-[420px] grayscale-[10%] hover:grayscale-0 transition-all duration-700 font-sans flex-grow"
-              />
+                className="w-full h-full min-h-[420px] grayscale-[5%] hover:grayscale-0 transition-all duration-700 font-sans flex-grow"
+              >
+                <div className="w-full h-full flex items-center justify-center bg-stone-100 text-stone-500 font-sans text-sm">
+                  Unable to load map. Please check your connection.
+                </div>
+              </iframe>
             </div>
           </motion.div>
  

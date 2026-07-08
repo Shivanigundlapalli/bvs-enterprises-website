@@ -72,7 +72,7 @@ const DEFAULT_SETTINGS: WebsiteSettings = {
   phone_number: '+91 85208 56709',
   whatsapp_number: '918520856709',
   business_hours: 'Daily: 10:00 AM - 9:00 PM',
-  google_maps_url: 'https://maps.app.goo.gl/9yB7gT7kZ9s',
+  google_maps_url: 'https://www.google.com/maps/search/?api=1&query=BVS+Enterprises,+Near+Sridevi+Complex,+Beside+SBI+ATM,+OPP+Muthoottu+Mini+Financiers,+Tilak+Road,+Tirupati+-+517501',
   address: 'BVS Enterprises, Near Sridevi Complex, Beside SBI ATM, OPP Muthoottu Mini Financiers, Tilak Road, Tirupati - 517501',
   address_landmark: 'Near Sridevi Complex, Beside SBI ATM, Tilak Road',
   social_facebook: 'https://facebook.com/bvsenterprises',

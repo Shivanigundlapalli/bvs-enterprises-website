@@ -12,7 +12,8 @@ import {
   Loader2,
   Copy,
   Check,
-  Smartphone
+  Smartphone,
+  ExternalLink
 } from 'lucide-react';
 import { WebsiteSettings } from '../types';
 
@@ -526,8 +527,39 @@ export default function ContactView({
           
           {/* Map Column (lg:col-span-7) */}
           <div className="lg:col-span-7 h-[320px] sm:h-[400px] rounded-[16px] overflow-hidden border border-black/[0.08] relative group">
+            {/* Custom Premium Map Overlay Card */}
+            <div className="absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl border border-black/5 max-w-[260px] sm:max-w-[300px]">
+              <h4 className="font-serif font-bold text-[#2E2A27] text-base sm:text-lg mb-1 tracking-tight">BVS ENTERPRISES</h4>
+              <p className="text-[11px] sm:text-xs text-[#6E6A66] font-sans leading-relaxed mb-4">
+                Near Sridevi Complex, Beside SBI ATM,<br/>
+                Opp Muthoottu Mini Financiers,<br/>
+                Tilak Road, Tirupati,<br/>
+                Andhra Pradesh – 517501, India
+              </p>
+              <div className="flex flex-col gap-2">
+                <a 
+                  href="https://www.google.com/maps/dir/?api=1&destination=BVS%20ENTERPRISES%2C%20Near%20Sridevi%20Complex%2C%20Beside%20SBI%20ATM%2C%20Opp%20Muthoottu%20Mini%20Financiers%2C%20Tilak%20Road%2C%20Tirupati%2C%20Andhra%20Pradesh%20517501%2C%20India"
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="flex items-center justify-center gap-2 w-full bg-[#A86A33] hover:bg-[#915B29] text-white text-[11px] sm:text-xs font-semibold py-2.5 px-4 rounded-xl transition-colors shadow-md"
+                >
+                  <span>Get Directions</span>
+                  <MapPin className="w-3.5 h-3.5" />
+                </a>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=BVS%20ENTERPRISES%2C%20Near%20Sridevi%20Complex%2C%20Beside%20SBI%20ATM%2C%20Opp%20Muthoottu%20Mini%20Financiers%2C%20Tilak%20Road%2C%20Tirupati%2C%20Andhra%20Pradesh%20517501%2C%20India"
+                  target="_blank" 
+                  rel="noreferrer" 
+                  className="flex items-center justify-center gap-2 w-full bg-white hover:bg-stone-50 text-[#2E2A27] border border-[#E2D9CC] text-[11px] sm:text-xs font-semibold py-2.5 px-4 rounded-xl transition-colors shadow-sm"
+                >
+                  <span>Open in Google Maps</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </div>
+
             <iframe 
-              src="https://maps.google.com/maps?q=BVS%20Enterprises,%20Tilak%20Road,%20Tirupati&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=BVS%20ENTERPRISES%2C%20Near%20Sridevi%20Complex%2C%20Beside%20SBI%20ATM%2C%20Opp%20Muthoottu%20Mini%20Financiers%2C%20Tilak%20Road%2C%20Tirupati%2C%20Andhra%20Pradesh%20517501%2C%20India&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
@@ -535,11 +567,12 @@ export default function ContactView({
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
               title="BVS Enterprises Tirupati Map"
-              className="w-full h-full grayscale-[15%] group-hover:grayscale-0 transition-all duration-700"
-            />
-            <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl text-[10px] font-sans font-bold uppercase tracking-wider text-[#8B4F24] border border-black/[0.04] shadow-sm">
-              📍 Near Sridevi Complex, Tilak Road
-            </div>
+              className="w-full h-full grayscale-[5%] group-hover:grayscale-0 transition-all duration-700"
+            >
+              <div className="w-full h-full flex items-center justify-center bg-stone-100 text-stone-500 font-sans text-sm">
+                Unable to load map. Please check your connection.
+              </div>
+            </iframe>
           </div>
 
           {/* Guide Column (lg:col-span-5) */}
@@ -550,7 +583,7 @@ export default function ContactView({
             
             <h3 className="font-serif font-semibold text-h2 leading-tight text-[#222222] tracking-tight">
               Located on the Main <br />
-              Tirupati Bypass Road
+              Tilak Road
             </h3>
             
             <p className="text-[16px] text-[#6F6F6F] leading-[1.8] font-sans">
@@ -559,7 +592,7 @@ export default function ContactView({
 
             <div className="pt-2">
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=BVS+Enterprises+Near+Best+Price+Tirupati"
+                href="https://www.google.com/maps/dir/?api=1&destination=BVS%20ENTERPRISES%2C%20Near%20Sridevi%20Complex%2C%20Beside%20SBI%20ATM%2C%20Opp%20Muthoottu%20Mini%20Financiers%2C%20Tilak%20Road%2C%20Tirupati%2C%20Andhra%20Pradesh%20517501%2C%20India"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-[#8B4F24] hover:bg-[#5C3315] text-white text-xs font-bold uppercase tracking-widest h-[48px] px-[28px] rounded-full transition-all duration-300 shadow-[0_4px_12px_rgba(139,79,36,0.12)] hover:shadow-[0_8px_20px_rgba(139,79,36,0.2)] hover:-translate-y-[2px] cursor-pointer w-full sm:w-auto"
