@@ -315,11 +315,11 @@ export default function ShowroomLocation({ settings, hideHeader = false }: Showr
                   href={mapSearchUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-base btn-primary w-full gap-2 group/btn"
+                  className="btn-base btn-primary w-full gap-1.5 sm:gap-2 group/btn !whitespace-normal !h-auto min-h-[48px] py-3 px-3 sm:px-6 text-center"
                 >
-                  <MapPin className="w-4.5 h-4.5 text-[#C39A6B] group-hover/btn:scale-110 transition-transform" />
-                  <span>Get Directions in Google Maps</span>
-                  <ChevronRight className="w-4 h-4 text-[#C39A6B] group-hover/btn:translate-x-1 transition-transform" />
+                  <MapPin className="w-4 h-4 sm:w-4.5 sm:h-4.5 shrink-0 text-[#C39A6B] group-hover/btn:scale-110 transition-transform" />
+                  <span className="text-[11px] sm:text-sm leading-tight sm:leading-normal">Get Directions in Google Maps</span>
+                  <ChevronRight className="w-4 h-4 shrink-0 text-[#C39A6B] group-hover/btn:translate-x-1 transition-transform" />
                 </a>
  
               </div>
